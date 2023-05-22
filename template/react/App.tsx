@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './pages/header';
 
 function App() {
-  const handleClick = () => {
-    console.log('Clicked!');
-}
-  return <button onClick={handleClick}>Test</button>
+  return (
+    <Fragment>
+      <Header />
+      <Outlet />
+    </Fragment>
+  );
 }
 
-export default App
+export default App;
