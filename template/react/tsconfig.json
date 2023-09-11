@@ -1,7 +1,6 @@
 
 {
         "compilerOptions": {
-            "module": "ESNext",
             "jsx":"react-jsx",
             "esModuleInterop": true,
             "noImplicitAny": false,
