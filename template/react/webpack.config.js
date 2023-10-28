@@ -10,7 +10,7 @@ module.exports = {
     },
     devtool: 'eval-cheap-module-source-map',
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css'],
     },
     module: {
         rules: [
@@ -25,8 +25,8 @@ module.exports = {
                 exclude: [/node_modules/],
             },
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                test: /\.css|\.scss$/i,
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico|eot|ttf|woff|woff2)$/i,
@@ -36,7 +36,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'aigc',
+            title: 'New Project',
             template: './public/index.html'
         }),
     ],
